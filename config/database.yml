@@ -4,6 +4,7 @@ development:
   database: spreecommercetest
   pool: 5
   password:
+  port: 5432
 
 test:
   adapter: postgresql
@@ -11,6 +12,7 @@ test:
   database: spreecommercedev
   pool: 5
   password:
+  port: 5432
 
 production:
   adapter: postgresql
