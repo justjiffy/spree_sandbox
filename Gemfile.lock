@@ -345,6 +345,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spree (= 3.0.4)
   spree_auth_devise!
+  spree_frontend (= 3.0.4)
   spree_gateway!
   spring
   turbolinks

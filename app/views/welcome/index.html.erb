@@ -1,7 +1,1 @@
 <h1>WELCOME TO THE ONLINE STORE!</h1>
-
-<% if products.empty? %>
- <%= Spree.t(:no_products_found) %>
-<% elsif params.key?(:keywords) %>
-  <h3><%= Spree.t(:products) %></h3>
-<% end %>
