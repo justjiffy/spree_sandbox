@@ -27,8 +27,12 @@ h1 {
 }
 
 .brand {
-	height: 80px;
+	height: 75px;
+	position: absolute;
+	top: 40px;
+	left: 10px;
 }
+
 .taller {
 	height: 120px;
 }
