@@ -17,7 +17,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: spreecommerceprod
+  database: spreecommercetest
   pool: 5
   password:
   port: 5432  
