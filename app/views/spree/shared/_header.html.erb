@@ -23,25 +23,25 @@
       </form> -->
       <ul class="nav navbar-nav navbar-right navbar-fixed-top-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EXPERIENCE <span class="caret"></span></a>
+          <a href="/experience" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EXPERIENCE <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Watch Videos</a></li>
-            <li><a href="#">Listen to Music</a></li>
-            <li><a href="#">Read Comic</a></li>
-            <li><a href="#">Play Game</a></li>
+            <li><a href="/experience/videos">Watch Videos</a></li>
+            <li><a href="/experience/music">Listen to Music</a></li>
+            <li><a href="/experience/comics">Read Comic</a></li>
+            <li><a href="/experience/game">Play Game</a></li>
           </ul>
         </li>
-        <li><a href="./store">STORE</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="/store">STORE</a></li>
         <li><%= link_to('/calendar') do %> CALENDAR <% end %>></li>
-             <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MORE... <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Band Bio</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Other Stories</a></li>
-          </ul>
-        </li>
+        <li><a href="/contact">CONTACT</a></li>
+          <li class="dropdown">
+              <a href="/more" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MORE... <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/more/bio">Band Bio</a></li>
+                <li><a href="/more/press">Press</a></li>
+                <li><a href="/more/stories">Other Stories</a></li>
+              </ul>
+          </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

@@ -6,6 +6,10 @@
     padding-top: 150px;
  }
 
+ h1 {
+ 	font-size: 60px;
+ }
+
 .innerContent {
 	padding: 0 50px;
 	background-color: rgba(255, 255, 255, 0.5);
