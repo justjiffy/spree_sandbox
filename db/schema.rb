@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151024221523) do
+ActiveRecord::Schema.define(version: 20151026232549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -516,9 +516,7 @@ ActiveRecord::Schema.define(version: 20151024221523) do
   end
 
   create_table "spree_prototypes", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "name"
   end
 
   create_table "spree_refund_reasons", force: :cascade do |t|
@@ -947,7 +945,7 @@ ActiveRecord::Schema.define(version: 20151024221523) do
   add_index "spree_users", ["email"], name: "email_idx_unique", unique: true, using: :btree
   add_index "spree_users", ["spree_api_key"], name: "index_spree_users_on_spree_api_key", using: :btree
 
-  create_table "spree_variants", force: :cascade do |t|
+  create_table "index_spree_variants_on_positionants", force: :cascade do |t|
     t.string   "sku",                                        default: "",    null: false
     t.decimal  "weight",            precision: 8,  scale: 2, default: 0.0
     t.decimal  "height",            precision: 8,  scale: 2

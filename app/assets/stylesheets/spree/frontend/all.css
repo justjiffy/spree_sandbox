@@ -26,6 +26,10 @@
 	display: block;
 }
 
-h1 {
-	font-size: 100px;
+.bottomPadding {
+	padding-bottom: 50px
+}
+
+.topPadding {
+	padding-top: 50px
 }

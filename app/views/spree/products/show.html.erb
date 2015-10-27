@@ -1,0 +1,41 @@
+
+  <div class="row topPadding" itemscope itemtype="https://schema.org/Product">
+    <div class="col-md-4">
+      <div>
+        <div id="product-images">
+          <div id="main-image" class="panel panel-default">
+            <div class="panel-body text-center">
+              <%= render :partial => 'image' %>
+            </div>
+          </div>
+          <div id="thumbnails">
+            <%= render :partial => 'thumbnails' %>
+          </div>
+        </div>
+
+        <div>
+          <%= render :partial => 'promotions' %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div>
+        <div id="product-description">
+          <h1 class="product-title" itemprop="name"><%= @product.name %></h1>
+
+          <div class="well" itemprop="description">
+            <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
+          </div>
+
+          <div id="cart-form">
+            <%= render :partial => 'cart_form' %>
+          </div>
+        </div>
+
+        <div id="taxon-crumbs" class=" five bottomPadding">
+          <%= render :partial => 'taxons' %>
+        </div>
+      </div>
+    </div>
+  </div>
