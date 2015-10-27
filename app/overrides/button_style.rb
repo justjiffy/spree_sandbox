@@ -1,4 +1,4 @@
-Deface::Override.new(:virtual_path  => "spree/home/index",
-                     :insert_before => "h1",
+Deface::Override.new(:virtual_path  => "spree/products/_cart_form",
+                     :insert_after => "h3",
                      :text          => "<p>ROBOTS are the future!</p>",
                      :name          => "cart_button")
