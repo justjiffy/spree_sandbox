@@ -1,0 +1,43 @@
+<ul class="nav navbar-nav navbar-right navbar-fixed-top-right">
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      EDIT STORE 
+      <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <% if can? :admin, current_store %>
+          <li class="nav nav-sidebar">
+            <%= main_menu_tree Spree.t(:configurations), icon: "wrench", sub_menu: "configuration", url: "#sidebar-configuration" %>
+          </li>
+      <% end %>
+     <% if can? :admin, Spree::Order %>
+        <li class="nav nav-sidebar">
+          <%= tab *Spree::BackendConfiguration::ORDER_TABS, icon: 'shopping-cart' %>
+        </li>
+      <% end %>
+
+      <% if can? :admin, Spree::Product %>
+        <li class="nav nav-sidebar">
+          <%= main_menu_tree Spree.t(:products), icon: "th-large", sub_menu: "product", url: "#sidebar-product" %>
+        </li>
+      <% end %>
+
+      <% if can? :admin, Spree::Admin::ReportsController %>
+        <li class="nav nav-sidebar">
+          <%= tab *Spree::BackendConfiguration::REPORT_TABS, icon: 'file'  %>
+        </li>
+      <% end %>
+
+      <% if can? :admin, Spree::Promotion %>
+        <li class="nav nav-sidebar">
+          <%= main_menu_tree Spree.t(:promotions), icon: "gift", sub_menu: "promotion", url: "#sidebar-promotions" %>
+        </li>
+      <% end %>
+
+      <% if Spree.user_class && can?(:admin, Spree.user_class) %>
+        <li class="nav nav-sidebar">
+          <%= tab *Spree::BackendConfiguration::USER_TABS, url: spree.admin_users_path, icon: 'user' %>
+        </li>
+      <% end %>
+    </ul>
+  </li>
+</ul>
