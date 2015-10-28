@@ -1,0 +1,18 @@
+  <% @posts.each do |f| %>
+ 	
+ 	<div style="clear: both">
+ 	
+	 	<h2><%= f.title %></h2>
+	  	<%= image_tag f.img, :class => "main_image" %>
+	  	
+	  	<p><%= f.body %></p>
+		
+		<p style="text-align: right;">
+			<%= link_to "See All...", "#" %>
+		</p>
+	    
+	    <br><br><br>	
+		
+	</div>
+ 
+  <% end %>
