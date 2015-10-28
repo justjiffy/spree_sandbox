@@ -1,0 +1,10 @@
+<h1><%= @post.title %></h1>
+
+<div class="narrow">
+	<p><%= image_tag(@post.img, class: 'main_image') %><%= @post.body %></p><br>
+
+	<div style="text-align: right">
+		<%= link_to ("<i class='fa fa-arrow-circle-left fa-3x'> </i>").html_safe, main_app.root_path %>
+		<br><br>
+	</div>
+</div>

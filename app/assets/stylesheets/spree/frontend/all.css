@@ -10,6 +10,14 @@ body {
  	font-size: 60px;
  }
 
+ a, a:visited, a:active {
+	color: black;
+}
+
+a:hover {
+	color: gray;
+}
+
 .innerContent {
 	padding: 0 50px;
 	background-color: rgba(255, 255, 255, 0.5);
