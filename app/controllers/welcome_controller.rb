@@ -1,5 +1,5 @@
 class WelcomeController < Spree::BaseController
- # before_action :check_authorization, :except => [:index, :show]
+ before_action :check_logged_in, :except => [:index, :show]
 
 	def index
 		@posts = Post.all.sort_by(&:created_at)
@@ -59,3 +59,4 @@ class WelcomeController < Spree::BaseController
 			end
 
 	end
+

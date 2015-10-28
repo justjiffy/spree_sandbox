@@ -8,7 +8,7 @@
   <% @posts.each do |f| %>
        <li><strong><%= truncate(f.title, :length => 20, :separator => ' ') %></strong> <%= link_to "(edit)", "#" %> | 
         <%= truncate(f.body, :length => 50, :separator => " ") %> | 
-        (<%= f.created_at %> by SOMEONE</li>
+        (<%= f.created_at %> by <%= spree_current_user.email %></li>
 
         <% end %>
 </div>
