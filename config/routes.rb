@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   get '/more/press' => 'more#press'
   get '/more/stories' => 'more#stories'
 
+  # CUSTOM ADMIN ROUTES 
+  get '/admin/homepage' => 'welcome#new', as: :edit_homepage
           # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
