@@ -1,5 +1,7 @@
+
 class PostController < ApplicationController
- 
+ before_action :check_authorization
+
   def index
     @post = Post.all.sort_by(&:created_at)
   end
