@@ -1,0 +1,60 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require jquery-ui/datepicker
+ *= require jquery-ui/autocomplete
+ *= require select2
+ *= require animate
+ *= require spree/backend/spree_admin
+*/
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 150px 50px;
+ }
+
+h1 {
+ 	font-size: 60px;
+ }
+
+p {
+	color: black;
+}
+
+a, a:visited, a:active {
+	color: black;
+}
+
+a:hover {
+	color: gray;
+}
+.innerContent {
+	padding: 0 50px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.brand {
+	height: 75px;
+	position: absolute;
+	top: 40px;
+	left: 10px;
+}
+
+.taller {
+	height: 120px;
+}
+
+.blocked {
+	display: block;
+}
+
+.bottomPadding {
+	padding-bottom: 50px
+}
+
+.topPadding {
+	padding-top: 50px
+}

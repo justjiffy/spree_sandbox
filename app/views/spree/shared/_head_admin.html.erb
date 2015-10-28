@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<title>Run Downhill Music</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+<%== meta_data_tags %>
+<%= canonical_tag(current_store.url) %>
+<%= favicon_link_tag 'favicon.ico' %>
+
+<!-- jQuery 1.11.3.min -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- BOOTSTRAP Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+<!-- BOOTSTRAP Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+<!-- BOOTSTRAP Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+<!-- FONTS.COM LINK -->
+<script type="text/javascript" src="https://fast.fonts.net/jsapi/b5591209-de14-426c-89c3-3dc68a865c54.js"></script>
+
+<%= stylesheet_link_tag 'spree/backend/all', media: 'screen' %>
+<%= csrf_meta_tags %>
+<%= javascript_include_tag 'spree/backend/custom_app' %>
+<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+<![endif]-->
+
+<style>
+body { background-image: url(<%= asset_path 'bg1.jpg' %>)}
+</style>
+
+<%= yield :head %>

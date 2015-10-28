@@ -5,9 +5,10 @@
 <!--[if IE 9 ]>    <html class="ie ie9" lang="<%= I18n.locale %>"> <![endif]-->
 <!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
   <head data-hook="inside_head">
-    <%= render partial: 'spree/shared/head' %>
+    <%= render partial: 'spree/shared/head_admin' %>
   </head>
- <body class="admin">
+ <body class="padding">
+
     <%#-------------------------------------------------%>
     <%# Header navbar                                   %>
     <%#-------------------------------------------------%>
@@ -16,46 +17,33 @@
     <%#-------------------------------------------------%>
     <%# Main content                                    %>
     <%#-------------------------------------------------%>
-    <div id="wrapper" class="container-fluid <%= wrapper_classes %>">
+    <div id="wrapper" class="container-fluid <%= wrapper_classes %> innerContent">
       <div class="row">
+            <%#-------------------------------------------------%>
+            <%# Content header (page title/actions)             %>
+            <%#-------------------------------------------------%>
+            
+            <%= render partial: 'spree/admin/shared/content_header' %>
+      </div>
 
-        <%#-------------------------------------------------%>
-        <%# Content                                         %>
-        <%#-------------------------------------------------%>
-        <div class="<%= main_part_classes %> main" id="main-part">
-
-          <%#-------------------------------------------------%>
-          <%# Content header (page title/actions)             %>
-          <%#-------------------------------------------------%>
-          <%= render partial: 'spree/admin/shared/content_header' %>
-
-          <div class="row">
+      <div class="row">
             <%#-------------------------------------------------%>
             <%# Alerts                                          %>
             <%#-------------------------------------------------%>
             <%= flash_alert(flash) %>
+      </div>
 
+      <div class="row">
             <%#-------------------------------------------------%>
             <%# Main content                                    %>
             <%#-------------------------------------------------%>
-            <div class="<%= content_for?(:sidebar) ? 'with-sidebar col-md-9 col-sm-8' : 'col-sm-12'  %>" id="content" data-hook>
+            <div id="content" data-hook>
               <%= render partial: 'spree/admin/shared/table_filter' if content_for?(:table_filter)%>
               <%= yield %>
             </div>
 
-            <%#-------------------------------------------------%>
-            <%# Inner aside                                     %>
-            <%#-------------------------------------------------%>
-            <% if content_for?(:sidebar) %>
-              <div class="col-md-3 col-sm-4">
-                <%= render partial: 'spree/admin/shared/sidebar' %>
-              </div>
-            <% end %>
-          </div>
-
-
-        </div>
       </div>
+
     </div>
 
     <%#-------------------------------------------------%>
