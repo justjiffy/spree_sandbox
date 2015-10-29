@@ -3,7 +3,6 @@ class WelcomeController < Spree::BaseController
 
 	def index
 		@posts = Post.all.sort_by(&:created_at)
-		
 		render layout: '../views/spree/layouts/spree_application'
 	end
 
@@ -14,11 +13,12 @@ class WelcomeController < Spree::BaseController
 
 	def new
 		@posts = Post.all 
-		render '../views/spree/admin/homepage/index'
+		render '../views/spree/admin/homepage/index', layout: '../views/spree/layouts/admin'
 	end
 
 	def new_post
 		@post = Post.new
+		render layout: '../views/spree/layouts/admin'
 	end
 
 	def create
@@ -31,6 +31,7 @@ class WelcomeController < Spree::BaseController
 
 	def edit
 		@edit_post = Post.find(params[:id])
+		render layout: '../views/spree/layouts/admin'
 	end
 
 	def update

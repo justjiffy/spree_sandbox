@@ -2,7 +2,7 @@
 
 <div id="post" class="main_narrow">
 	
-	<%= link_to ("<button>Add New Post</button>").html_safe, '/admin/homepage/new' %>
+	<%= link_to ("<button>Add New Post</button>").html_safe, main_app.new_path %>
 
 </div>
   <% @posts.each do |f| %>

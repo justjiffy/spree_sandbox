@@ -8,13 +8,13 @@ Rails.application.routes.draw do
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
   mount Spree::Core::Engine, :at => '/'
   
-  get 'show/:id' => 'welcome#show', as: :full
+  get '/post/:id' => 'welcome#show', as: :full
   
-  get 'store/' => 'spree/home#index', as: :store
+  get '/store' => 'spree/home#index', as: :store
   
-  get 'calendar/' => 'calendar#index', as: :calendar
+  get '/calendar/' => 'calendar#index', as: :calendar
   
-  get 'contact' => 'contact#index'
+  get '/contact' => 'contact#index'
   
   get '/experience' => 'experience#index'
   get '/experience/comics' => 'experience#comics'
@@ -29,10 +29,13 @@ Rails.application.routes.draw do
 
   # CUSTOM ADMIN ROUTES 
   get '/admin/homepage' => 'welcome#new', as: :edit_homepage
-  get '/admin/homepage/new' => 'welcome#new_post'
-  post 'post/' => 'welcome#create', as: :new_post
-  get 'admin/homepage/:id/edit' => 'welcome#edit', as: :edit_post
+  get '/admin/homepage/new' => 'welcome#new_post', as: :new
+  post '/post' => 'welcome#create', as: :new_post
+  get '/admin/homepage/:id/edit' => 'welcome#edit', as: :edit_post
   patch '/admin/homepage/:id/edit' => 'welcome#update'
+  delete 'admin/homepage/:id' => 'welcome#destroy'
+  get '/admin/homepage/:id' => 'welcome#show', as: :fool
+
           # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
