@@ -1,17 +1,12 @@
   <% @posts.each do |f| %>
  	
- 	<div style="clear: both">
+ 	<div class="innerContent" style="clear: both">
  	
 	 	<h2><%= f.title %></h2>
-	  	<%= image_tag f.img.url(:medium), :class => "post" %>
-	  	
+	  	<%= image_tag f.img.url(:medium), :class => "post" %><br><br>
 	  	<p><%= f.body %></p>
-		
-		<p style="text-align: right;">
-			<%= link_to "See All...", main_app.full_path(f) %>
-		</p>
 	    
 	    <br><br><br>	
+	    
 	</div>
- 
   <% end %>

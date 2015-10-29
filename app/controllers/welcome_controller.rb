@@ -2,7 +2,7 @@ class WelcomeController < Spree::BaseController
  before_action :check_logged_in, :except => [:index, :show]
 
 	def index
-		@posts = Post.all.sort_by(&:created_at)
+		@posts = Post.all.sort_by(&:id).reverse
 		render layout: '../views/spree/layouts/spree_application'
 	end
 

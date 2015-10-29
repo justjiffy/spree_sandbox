@@ -1,14 +1,19 @@
-<h1> Here's where you can make or edit homepage posts!</h1>
+<h1 class="innerContent">
+	Add New Post - 
+	<span class="noShadow">
+		<%= link_to ("<i class='fa fa-pencil-square-o'></i>").html_safe, main_app.new_path %>
+	</span>
+</h1>
 
-<div id="post" class="main_narrow">
-	
-	<%= link_to ("<button>Add New Post</button>").html_safe, main_app.new_path %>
 
-</div>
+<div id="post" class="innerContent">
+	<h1>Edit Existing Post</h1>
   <% @posts.each do |f| %>
-       <li><strong><%= truncate(f.title, :length => 20, :separator => ' ') %></strong> <%= link_to "(edit)", main_app.edit_post_path(f) %> | 
+       <li>
+       	<%= link_to ("<i class='fa fa-pencil fa-2x'></i>").html_safe, main_app.edit_post_path(f) %>
+       	<strong><%= truncate(f.title, :length => 20, :separator => ' ') %></strong> | 
         <%= truncate(f.body, :length => 50, :separator => " ") %> | 
-        (<%= f.created_at %> by <%= spree_current_user.email %></li>
+        (<%= f.created_at %> by <%= spree_current_user.email %>)</li>
 
         <% end %>
 </div>

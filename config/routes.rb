@@ -33,7 +33,6 @@ Rails.application.routes.draw do
   post '/post' => 'welcome#create', as: :new_post
   get '/admin/homepage/:id/edit' => 'welcome#edit', as: :edit_post
   patch '/admin/homepage/:id/edit' => 'welcome#update'
-  get '/admin/homepage/:id' => 'welcome#edit', as: :fool
   get 'admin/homepage/destroy/:id' => 'welcome#destroy', as: :remove_post
 
           # The priority is based upon order of creation: first created -> highest priority.
