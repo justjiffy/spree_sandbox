@@ -8,6 +8,9 @@
 	Body: <%= f.text_area :body, size: "80x15"  %><br>
 
 	<%= f.submit "Edit Post", :class => "button" %>
+
+	<%= link_to ("<button>DELETE POST</button>").html_safe, main_app.edit_homepage_path, method: :delete, data: { confirm: "You can not undo this action! Are you sure you want to delete???" } %>
+
 <% end %>
 
 

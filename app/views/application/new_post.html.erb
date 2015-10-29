@@ -1,0 +1,10 @@
+
+<h1>NEW POST!</h1>
+	<%= form_for @post, url: main_app.new_post_path do |f| %>
+	Title: <%= f.text_field :title %><br>  
+	Image Link: <%= f.text_field :img %><br>  
+	Body: <%= f.text_area :body, size: "80x15"  %><br>
+	<%= f.hidden_field :user_id, :value => spree_current_user.id %>
+
+	<%= f.submit "Add Post" %>
+<% end %>

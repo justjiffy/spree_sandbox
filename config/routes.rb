@@ -29,6 +29,8 @@ Rails.application.routes.draw do
 
   # CUSTOM ADMIN ROUTES 
   get '/admin/homepage' => 'welcome#new', as: :edit_homepage
+  get '/admin/homepage/new' => 'welcome#new_post'
+  post 'post/' => 'welcome#create', as: :new_post
   get 'admin/homepage/:id/edit' => 'welcome#edit', as: :edit_post
   patch '/admin/homepage/:id/edit' => 'welcome#update'
           # The priority is based upon order of creation: first created -> highest priority.
