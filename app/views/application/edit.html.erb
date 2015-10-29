@@ -3,15 +3,19 @@
 	<h1>EDIT POST</h1>
 	 
 	<%= form_for @edit_post, url: main_app.edit_post_path, html: { multipart: true } do |f| %>
-	Title: <%= f.text_field :title %><br>  
-	Upload Image: <%= f.file_field :img %><br>  
-	Body: <%= f.text_area :body, size: "80x15"  %><br>
+		Title: <%= f.text_field :title %><br>  
+		Upload Image: <%= f.file_field :img %><br>  
+		Body: <%= f.text_area :body, size: "80x15"  %><br>
 
-	<%= f.submit "Edit Post", :class => "button" %>
+		<%= f.submit "Edit Post", :class => "button" %>
 
-	<%= link_to ("<button>DELETE POST</button>").html_safe, main_app.fool_path, method: :delete, data: { confirm: "You can not undo this action! Are you sure you want to delete???" } %>
 
-<% end %>
+	<% end %>
+
+	<%= link_to ("<button>DELETE POST</button>").html_safe, main_app.remove_post_path(@edit_post), method: :delete, data: { confirm: "You can not undo this action! Are you sure you want to delete???" } %>
+
+	<%= link_to 'DESTROY', main_app.remove_post_path(@edit_post), 
+	data: { confirm: 'sure?' }, method: :delete %>
 
 
 </div>
