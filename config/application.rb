@@ -9,7 +9,12 @@ Bundler.require(*Rails.groups)
 
 module Store
   class Application < Rails::Application
-    
+ 
+      # Enable iFrame
+      config.action_dispatch.default_headers = {
+          'X-Frame-Options' => 'ALLOWALL'
+      }
+
     config.to_prepare do
       # Load application's model / class decorators
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
