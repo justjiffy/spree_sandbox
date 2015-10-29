@@ -6,6 +6,11 @@ body {
     padding: 150px 50px;
  }
 
+ .post {
+ 	min-width: 50%;
+ 	max-width: 100%
+ }
+
  h1 {
  	font-size: 60px;
  }
