@@ -24,8 +24,8 @@ class WelcomeController < Spree::BaseController
 	def create
 		@post = Post.create(post_params)
 		if @post.save
-			redirect_to post_path
-		else redirect_to root_path
+			redirect_to main_app.edit_homepage_path
+		else redirect_to main_app.root_path
 		end
 	end
 
@@ -36,7 +36,7 @@ class WelcomeController < Spree::BaseController
 	def update
 		@post = Post.find(params[:id])
 		if @post.update_attributes(post_params)
-			redirect_to post_path
+			redirect_to main_app.edit_homepage_path
 		else
 			render :edit
 		end
@@ -49,7 +49,7 @@ class WelcomeController < Spree::BaseController
 	def destroy
 		@post = Post.find(params[:id])
 		@post.destroy
-		redirect_to post_path
+		redirect_to main_app.edit_homepage_path
 	end
 
 			private

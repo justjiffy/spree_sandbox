@@ -6,7 +6,7 @@
 
 </div>
   <% @posts.each do |f| %>
-       <li><strong><%= truncate(f.title, :length => 20, :separator => ' ') %></strong> <%= link_to "(edit)", "#" %> | 
+       <li><strong><%= truncate(f.title, :length => 20, :separator => ' ') %></strong> <%= link_to "(edit)", main_app.edit_post_path(f) %> | 
         <%= truncate(f.body, :length => 50, :separator => " ") %> | 
         (<%= f.created_at %> by <%= spree_current_user.email %></li>
 

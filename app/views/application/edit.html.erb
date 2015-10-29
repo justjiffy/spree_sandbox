@@ -1,0 +1,14 @@
+<div id="post" class="main_narrow">
+
+	<h1>EDIT POST</h1>
+	 
+	<%= form_for @edit_post, url: main_app.edit_post_path do |f| %>
+	Title: <%= f.text_field :title %><br>  
+	Image Link: <%= f.text_field :img %><br>  
+	Body: <%= f.text_area :body, size: "80x15"  %><br>
+
+	<%= f.submit "Edit Post", :class => "button" %>
+<% end %>
+
+
+</div>
