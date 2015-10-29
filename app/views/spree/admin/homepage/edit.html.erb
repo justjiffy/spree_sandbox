@@ -2,9 +2,9 @@
 
 	<h1>EDIT POST</h1>
 	 
-	<%= form_for @edit_post, url: main_app.edit_post_path, html: { multipart: true } do |f| %>
+	<%= form_for @edit_post, url: main_app.edit_post_path do |f| %>
 	Title: <%= f.text_field :title %><br>  
-	Upload Image: <%= f.file_field :img %><br>  
+	Image Link: <%= f.text_field :img %><br>  
 	Body: <%= f.text_area :body, size: "80x15"  %><br>
 
 	<%= f.submit "Edit Post", :class => "button" %>

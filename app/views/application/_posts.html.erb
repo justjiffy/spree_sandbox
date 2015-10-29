@@ -3,7 +3,7 @@
  	<div style="clear: both">
  	
 	 	<h2><%= f.title %></h2>
-	  	<%= image_tag f.img, :class => "main_image" %>
+	  	<%= image_tag f.img.url(:medium) %>
 	  	
 	  	<p><%= f.body %></p>
 		
