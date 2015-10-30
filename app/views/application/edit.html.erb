@@ -1,17 +1,16 @@
-	<h1>EDIT POST</h1>
-	 
-	<%= bootstrap_form_for @edit_post, url: main_app.edit_post_path, html: { multipart: true } do |f| %>
-		
-		<%= f.text_field :title , label: "Title:"%><br>  
-		<%= f.file_field :img, label: "Upload Image:" %><br>  
-		<%= f.text_area :body, label: "Body"  %><br>
+<h1>EDIT POST</h1>
+ 
+<%= bootstrap_form_for @edit_post, url: main_app.edit_post_path, html: { multipart: true } do |f| %>
+	
+	<%= f.text_field :title , label: "Title:"%><br>  
+	<%= f.file_field :img, label: "Upload Image:" %><br>  
+	<%= f.text_area :body, label: "Body"  %><br>
 
-		<%= f.submit "Edit Post", :class => "btn btn-primary" %>
+	<%= f.submit "Edit Post", :class => "btn btn-primary" %>
 
-		<%= link_to ("<button class='btn btn-danger right'>DELETE POST</button>").html_safe, main_app.remove_post_path(@edit_post), 
-		data: { confirm: "You can not undo this action! Are you sure you want to delete???" }, method: :delete %>
+<% end %>
 
+	<%= link_to ("<button class='btn btn-danger right'>DELETE POST</button>").html_safe, main_app.remove_post_path(@edit_post), 
+	data: { confirm: "You can not undo this action! Are you sure you want to delete???" }, method: :delete %>
 
-	<% end %>
-
-	<br><br>
+<br><br>

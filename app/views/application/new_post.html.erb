@@ -1,9 +1,10 @@
 <h1>NEW POST!</h1>
-	<%= form_for @post, url: main_app.new_post_path, html: { multipart: true } do |f| %>
-	Title: <%= f.text_field :title %><br>  
-	Upload Image: <%= f.file_field :img %><br>  
-	Body: <%= f.text_area :body, size: "80x15"  %><br>
+	<%= bootstrap_form_for @post, url: main_app.new_post_path, html: { multipart: true } do |f| %>
+	<%= f.text_field :title, label: 'Title: ' %><br>  
+	<%= f.file_field :img, label: 'Upload Image: ' %><br>  
+	<%= f.text_area :body, label: 'Body: ' %><br>
 	<%= f.hidden_field :user_id, :value => spree_current_user.id %>
 
-	<%= f.submit "Add Post" %>
+	<%= f.submit "Add Post" %> 
+	<%= link_to ("<button class='btn btn-danger right'>Cancel</button>").html_safe, main_app.edit_homepage_path, :icon => 'remove' %>
 <% end %>

@@ -13,6 +13,11 @@ body {
  	border: 5px solid black;
  }
 
+.bordered {
+  border-radius: 10px;
+  border: 5px solid black;
+}
+
  h1 {
  	font-size: 60px;
  	color: white;
@@ -24,6 +29,9 @@ body {
        2px 2px 0 #000;
  }
 
+.noShadow {
+  text-shadow: none;
+}
  h2 {
   padding-top: 10px;
  	font-size: 36px;
@@ -67,6 +75,10 @@ a:hover {
 
 .right {
   float: right;
+}
+
+.left {
+  float: left;
 }
 .blocked {
 	display: block;
