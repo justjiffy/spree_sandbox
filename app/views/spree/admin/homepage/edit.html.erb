@@ -1,6 +1,4 @@
-<div id="post" class="main_narrow">
-
-	<h1>EDIT POST</h1>
+<h1>EDIT POST</h1>
 	 
 	<%= form_for @edit_post, url: main_app.edit_post_path do |f| %>
 	Title: <%= f.text_field :title %><br>  
@@ -12,6 +10,3 @@
 	<%= link_to ("<button>DELETE POST</button>").html_safe, main_app.fool_path, method: :delete, data: { confirm: "You can not undo this action! Are you sure you want to delete???" } %>
 
 <% end %>
-
-
-</div>
