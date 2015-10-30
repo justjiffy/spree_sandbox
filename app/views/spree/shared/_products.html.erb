@@ -1,0 +1,41 @@
+<% content_for :head do %>
+  <% if products.respond_to?(:num_pages) %>
+    <%= rel_next_prev_link_tags products %>
+  <% end %>
+<% end %>
+
+<div data-hook="products_search_results_heading">
+  <% if products.empty? %>
+    <div data-hook="products_search_results_heading_no_results_found">
+      <%= Spree.t(:no_products_found) %>
+    </div>
+  <% elsif params.key?(:keywords) %>
+    <div data-hook="products_search_results_heading_results_found">
+      <h6 class="search-results-title"><%= Spree.t(:search_results, keywords: h(params[:keywords])) %></h6>
+    </div>
+  <% end %>
+</div>
+
+<% if products.any? %>
+  <div id="products" class="row" data-hook>
+    <% products.each do |product| %>
+      <% url = spree.product_url(product, taxon_id: @taxon.try(:id)) %>
+      <div id="product_<%= product.id %>" class="col-md-6 product-list-item text-center" data-hook="products_list_item" itemscope itemtype="https://schema.org/Product">
+        <div class="panel innerContent spaced">
+              <%= link_to product_image(product, itemprop: "image"), url, class: 'spaced', itemprop: 'url' %><br/>
+              <h2><%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %></h2>
+            <div class="panel-footer text-center">
+              <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <span class="price selling lead" itemprop="price"><%= display_price(product) %></span>
+              </span>
+            </div>
+        </div>
+      </div>
+    <% end %>
+    <% reset_cycle("classes") %>
+  </div>
+<% end %>
+
+<% if products.respond_to?(:num_pages) %>
+  <%= paginate products, theme: 'twitter-bootstrap-3' %>
+<% end %>
