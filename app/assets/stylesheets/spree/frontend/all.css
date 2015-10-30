@@ -65,6 +65,9 @@ a:hover {
 	height: 120px;
 }
 
+.right {
+  float: right;
+}
 .blocked {
 	display: block;
 }
