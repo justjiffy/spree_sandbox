@@ -1,0 +1,178 @@
+body {
+/* 	background-image: url('bg1.jpg');*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    padding: 150px 50px;
+ }
+
+ .post {
+ 	min-width: 80%;
+ 	max-width: 100%;
+ 	border-radius: 10px;
+ 	border: 5px solid black;
+ }
+
+.spaced {
+  margin: 10px;
+}
+
+.bordered {
+  border-radius: 10px;
+  border: 5px solid black;
+}
+
+ h1 {
+ 	font-size: 60px;
+ 	color: white;
+ 	text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       2px 2px 0 #000;
+ }
+
+.noShadow {
+  text-shadow: none;
+}
+ h2 {
+  padding-top: 10px;
+ 	font-size: 36px;
+ 	text-shadow:
+       1px 1px 0 #fff,
+     -1px -1px 0 #fff,  
+      1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+       1px 1px 0 #fff;
+
+ }
+
+ p {
+ 	font-size: 20px;
+ }
+
+ a, a:visited, a:active {
+	color: black;
+}
+
+a:hover {
+	color: gray;
+}
+
+.innerContent {
+	padding: 0 50px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 10px
+}
+
+.brand {
+	height: 75px;
+	position: absolute;
+	top: 40px;
+	left: 10px;
+}
+
+.taller {
+	height: 120px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+.blocked {
+	display: block;
+}
+
+.bottomPadding {
+	padding-bottom: 50px;
+}
+
+.topPadding {
+	padding-top: 50px;
+}
+
+/* HACKY-HACK for btn-success and btn overrides */
+.btn-success, .btn-primary {
+  color: #fff;
+  background-color: #939393;
+  border-color: #707070;
+}
+.btn-success:focus,
+.btn-success.focus,
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #fff;
+  background-color: #7c7c7c;
+  border-color: #999999;
+}
+.btn-success:hover,
+.btn-primary:hover {
+  color: #fff;
+  background-color: #7c7c7c;
+  border-color: #398439;
+}
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary, {
+  color: #fff;
+  background-color: #7c7c7c;
+  border-color: #398439;
+  background-image: none;
+}
+.btn-success:active:hover,
+.btn-success.active:hover,
+.open > .dropdown-toggle.btn-success:hover,
+.btn-success:active:focus,
+.btn-success.active:focus,
+.open > .dropdown-toggle.btn-success:focus,
+.btn-success:active.focus,
+.btn-success.active.focus,
+.open > .dropdown-toggle.btn-success.focus,
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus  {
+  color: #fff;
+  background-color: #398439;
+  border-color: #999999;
+}
+
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled.focus,
+.btn-success[disabled].focus,
+fieldset[disabled] .btn-success.focus,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus  {
+  background-color: #939393;
+  border-color: #707070;
+}
+.btn-success .badge,
+.btn-primary .badge, {
+  color: #939393;
+  background-color: #fff;
+}
