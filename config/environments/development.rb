@@ -41,4 +41,7 @@ Rails.application.configure do
 
   # Here's where Paperclip can be found!
   Paperclip.options[:command_path] = "/usr/local/bin/"
+
+  # Sends photo storage to Amazon S3 account per Heroku Documentation
+  
 end
