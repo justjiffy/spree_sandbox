@@ -9,8 +9,8 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to(root_path, :class=>"navbar-brand") do %>
-      <span><%= image_tag("run_downhill_logo.png", :class => "brand navbar-fixed-top-left") %></span>
-<% end %>  
+      <span><%= image_tag("run_downhill_logo.png", :class => "brand img-responsive navbar-fixed-top-left") %></span>
+<% end %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,32 +18,32 @@
       <ul class="nav navbar-nav navbar-right navbar-fixed-top-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            EXPERIENCE 
+            EXPERIENCE
             <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/experience/videos">Watch Videos</a></li>
             <li><a href="/experience/music">Listen to Music</a></li>
             <li><a href="/experience/comics">Read Comic</a></li>
+            <li><a href="/experience/videos">Watch Videos</a></li>
             <li><a href="/experience/game">Play Game</a></li>
           </ul>
         </li>
 
         <li><a href="/store">STORE</a></li>
-        <li><%= link_to('/calendar') do %> CALENDAR <% end %>></li>
+        <li><%= link_to('/calendar') do %> LIVE EVENTS <% end %>></li>
         <li><a href="/contact">CONTACT</a></li>
-        
+
         <li class="dropdown">
               <a href="/more" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                MORE... 
+                MORE...
                 <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="/more/bio">Band Bio</a></li>
                 <li><a href="/more/press">Press</a></li>
+                <li><a href="/more/bio">Band Bio</a></li>
                 <li><a href="/more/stories">Other Stories</a></li>
               </ul>
         </li>
 
-        <li><a href="/login"><i class="fa fa-sign-in fa-2x" style="padding:0; margin-top:-5px"></i></a></li>
+        <li><a href="/login">LOGIN</a></li>
       </ul>
 
     </div><!-- /.navbar-collapse -->
