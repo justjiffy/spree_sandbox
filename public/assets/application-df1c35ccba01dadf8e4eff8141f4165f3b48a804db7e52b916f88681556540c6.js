@@ -14014,6 +14014,12 @@ if (typeof jQuery === 'undefined') {
 }).call(this);
 $( document ).ready(function() {
     console.log( "ready!" );
+
+var w = $(window).width();
+var h = $(window).height();
+
+console.log('Width: ' + w + 'Height: ' + h)
+
 });
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
