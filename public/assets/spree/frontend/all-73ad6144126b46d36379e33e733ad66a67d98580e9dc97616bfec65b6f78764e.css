@@ -253,3 +253,9 @@ fieldset[disabled] .btn-primary.focus  {
   color: #939393;
   background-color: #fff;
 }
+
+/* Smartphones ----------- */
+@media only screen and (max-width: 760px) {
+  .video-container { display: none; }
+  .splash-nav-inner { display: none; }
+}
