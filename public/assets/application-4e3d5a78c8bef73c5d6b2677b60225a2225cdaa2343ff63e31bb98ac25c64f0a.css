@@ -14712,6 +14712,7 @@ fieldset[disabled] .btn-primary.focus  {
 @media only screen and (max-width: 760px) {
   .video-container { display: none; }
   .splash-nav-inner { display: none; }
+  .section {top: 0 !important;}
 }
 /*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
