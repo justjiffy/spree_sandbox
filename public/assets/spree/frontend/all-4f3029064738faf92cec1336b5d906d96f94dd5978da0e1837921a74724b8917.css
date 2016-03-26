@@ -5,56 +5,63 @@ body {
     margin: 0;
     overflow-x: hidden;
  }
-
+video {
+  z-index: 0;
+}
 .video-container {
   position: absolute;
-  top: -300px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 1200px;
+  height: 100%;
   overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
 }
  .video-bg {
   width: 300%;
-  height: 1400px;
-  margin-left: -100%
+  height: 300%;
+  margin-left: -100%;
+  position: absolute;
+  top: -100%;
  }
-
-/*.video-overlay {
-  height: 0;
-  width: 100%;
-  overflow: visible;
-  pointer-events: none;
-  background: none !important;
-  display: block;
-  position: relative;
-  margin: 0 auto;
-}*/
-.splash-navigation {
-  position: relative;
-  height: 500px;
-  z-index: 100;
-}
 .splash-nav-inner {
   position: absolute;
-  bottom: -250px;
+  height: auto;
+  bottom: 10px;
+  left: 0;
   width: 100%;
   background: rgba(0,0,0,0.5);
   text-align: center;
+  pointer-events: none;
+  z-index: 10000;
 }
-.box {
+.splash-nav-inner h1 {
+  background: red
+}
+.splash-nav-inner h1:hover {
+  background: rgba(255,255,255,1)
+}
+.nav-text {
+  position: relative;
+  margin: 0 !important;
+  padding: 0 30px !important;
   display: inline-block;
-  margin-top: -5px;
-  padding: 0 30px;
+  font-size: 48px;
 }
-.first {
-  margin-top: 400px !important;
+.nav-text-hover {
+  display: inline-block;
+  font-size: 56px;
 }
-.last {
-  margin-bottom: 100px !important;
+.section-container {
+  position: absolute;
+  top: 750px;
+  left: 0;
+  width: 100%;
+  height: 1000px;
 }
 .section {
-  margin-top: 25px;
+  margin-bottom: 25px;
   min-height: 500px;
   width: 100%;
   background: black;
@@ -69,6 +76,12 @@ body {
 }
 .for-videos {
   background-image: url('/assets/bg3.jpg');
+}
+.splash-subheading {
+  width: 100%;
+  text-align: right ;
+  padding-right: 15px;
+  font-size: 52px;
 }
 
 .spaced {
@@ -125,7 +138,6 @@ a:hover {
 }
 
 .brand {
-	height: 75px;
 	position: absolute;
 	top: 40px;
 	left: 10px;

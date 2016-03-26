@@ -1,25 +1,41 @@
 <div class="video-container">
-    <iframe class="video-bg" src="https://www.youtube.com/embed/rjW_xDpwCk8?loop=1&autoplay=1&rel=0&showinfo=0&controls=0&playlist=rjW_xDpwCk8" frameborder="0" allowfullscreen></iframe>
+    <iframe class="video-bg" src="https://www.youtube.com/embed/rjW_xDpwCk8?wmode=transparent&loop=1&autoplay=1&rel=0&showinfo=0&controls=0&playlist=rjW_xDpwCk8" frameborder="0" allowfullscreen></iframe>
 </div>
-<div class="splash-navigation">
-  <div class="splash-nav-inner">
-    <div class="box">
-      <h1 style="margin: 0; padding: 0">MUSIC</h1>
-    </div>
-    <div class="box">
-      <h1 style="margin: 0; padding: 0">COMICS</h1>
-    </div>
-    <div class="box">
-      <h1 style="margin: 0; padding: 0">VIDEOS</h1>
-    </div>
+
+<div class="splash-nav-inner" style="z-index: 100000">
+    <a href="#for-music"><h1 class="nav-text">MUSIC</h1></a>
+    <a href="#for-comics"><h1 class="nav-text">COMICS</h1></a>
+    <a href="#for-videos"><h1 class="nav-text">VIDEOS</h1></a>
+</div>
+<div class="section-container">
+  <div class="section for-music" id="for-music">
+    <h2 class="splash-subheading">MUSIC</h2>
+  </div>
+
+  <div class="section for-comics" id="for-comics">
+    <h2 class="splash-subheading">COMICS</h2>
+  </div>
+
+  <div class="section for-videos" id="for-videos">
+    <h2 class="splash-subheading">VIDEOS</h2>
+    <div style="height: 1000px;"></div>
   </div>
 </div>
 
-<div class="first section for-music">
-</div>
-
-<div class="section for-comics">
-</div>
-
-<div class="last section for-videos">
-</div>
+<script type="text/javascript">
+// SCROLL ANIMATION
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+        || location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top - 125
+            }, 700);
+            return false;
+        }
+    }
+});
+// end scroll animation
+</script>
