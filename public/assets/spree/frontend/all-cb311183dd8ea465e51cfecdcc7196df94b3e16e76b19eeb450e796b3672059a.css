@@ -16,8 +16,8 @@ video {
   height: 100%;
   overflow: hidden;
   z-index: -1;
-  pointer-events: none;
-}
+/*  pointer-events: none;
+*/}
  .video-bg {
   width: 300%;
   height: 300%;
@@ -28,7 +28,7 @@ video {
 .splash-nav-inner {
   position: fixed;
   height: auto;
-  bottom: 10px;
+  bottom: 37px;
   left: 0;
   width: 100%;
   background: rgba(0,0,0,0.5);
