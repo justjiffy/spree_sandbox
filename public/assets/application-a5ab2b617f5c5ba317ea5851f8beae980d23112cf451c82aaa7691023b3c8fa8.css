@@ -14453,11 +14453,11 @@ input.form-control:active, input.form-control:focus {
   margin-top: 0;
 }
 body {
-    background: black;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
+  background: black;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
  }
 video {
   z-index: -1;
@@ -14523,6 +14523,8 @@ video {
 }
 .for-music {
   background-image: url('/assets/bg1.jpg');
+  margin-bottom: 57px;
+  text-align: center;
 }
 .for-comics {
   background-image: url('/assets/bg2.jpg');
@@ -14537,6 +14539,8 @@ video {
   text-align: right ;
   padding-right: 15px;
   font-size: 52px;
+  position: absolute;
+  right: 25px;
 }
 
 .splash-iframe {
@@ -14545,12 +14549,37 @@ video {
    max-width: 600px;
 }
 
+/* EXPERIENCE-PAGE STYLES */
+.music-page {
+  background-image: url('/assets/bg1.jpg');
+  background-size: cover;
+}
+.comic-page {
+  background-image: url('/assets/bg2.jpg');
+  background-size: cover;
+}
+.video-page {
+  background-image: url('/assets/bg3.jpg');
+  background-size: cover;
+}
+
+.music-page-player {
+  border: 0;
+  width: 100%;
+  max-width: 700px;
+  height: 373px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+/* GENERAL STYLES */
 .spaced {
   margin: 10px;
 }
 
 .bordered {
-  border-radius: 10px;
+  max-width: 700px;
   border: 5px solid black;
 }
 
@@ -14590,14 +14619,19 @@ video {
 
 a:hover {
 	color: gray;
+  text-decoration: none;
 }
 
 .innerContent {
 	padding: 0 50px;
 	background-color: rgba(255, 255, 255, 0.5);
-	border-radius: 10px
 }
 
+.paddedContainer {
+  margin-top: 127px;
+  min-height: 800px;
+  padding: 10px 25px 100px 25px;
+}
 .brand {
 	position: absolute;
 	top: 40px;
@@ -14627,6 +14661,25 @@ a:hover {
 	padding-top: 50px;
 }
 
+
+.btn-splash {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 36px;
+  padding: 11px 27px;
+  border: 1px solid black;
+  background: rgb(255, 255, 255);
+  -webkit-box-shadow: 5px 5px 0px rgba(50, 50, 50, 0.7);
+  -moz-box-shadow:    5px 5px 0px rgba(50, 50, 50, 0.7);
+  box-shadow:         5px 5px 0px rgba(50, 50, 50, 0.7);
+}
+.btn-splash:hover {
+  margin:0 -2px -1px 0;
+  color: black !important;
+  -webkit-box-shadow: 2px 2px 0px rgba(50, 50, 50, 1);
+  -moz-box-shadow:    2px 2px 0px rgba(50, 50, 50, 1);
+  box-shadow:         2px 2px 0px rgba(50, 50, 50, 1);
+}
 /* HACKY-HACK for btn-success and btn overrides */
 .btn-success, .btn-primary {
   color: #fff;
