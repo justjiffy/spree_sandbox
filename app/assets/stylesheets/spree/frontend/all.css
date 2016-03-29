@@ -81,12 +81,29 @@ video {
   margin-bottom: 100px;
 }
 .splash-subheading {
-  width: 100%;
-  text-align: right ;
-  padding-right: 15px;
   font-size: 52px;
   position: absolute;
   right: 25px;
+  padding: 15px 37px 10px 37px;
+  border: 1px solid black;
+  margin-top: -7px;
+  background: rgb(255, 255, 255);
+  -webkit-box-shadow: 5px 5px 0px rgba(50, 50, 50, 0.7);
+  -moz-box-shadow:    5px 5px 0px rgba(50, 50, 50, 0.7);
+  box-shadow:         5px 5px 0px rgba(50, 50, 50, 0.7);
+}
+
+.experience-heading {
+  font-size: 52px;
+  width: 200px;
+  text-align: center;
+  padding: 15px 37px 10px 37px;
+  border: 1px solid black;
+  margin-top: 7px;
+  background: rgb(255, 255, 255);
+  -webkit-box-shadow: 5px 5px 0px rgba(50, 50, 50, 0.7);
+  -moz-box-shadow:    5px 5px 0px rgba(50, 50, 50, 0.7);
+  box-shadow:         5px 5px 0px rgba(50, 50, 50, 0.7);
 }
 
 .splash-iframe {
@@ -117,6 +134,14 @@ video {
   display: block;
   margin: 0 auto;
   padding-bottom: 10px;
+}
+
+.comics-img-l {
+  display: inline-block;
+}
+.comics-img-r {
+  display: inline-block;
+  float: right;
 }
 
 /* GENERAL STYLES */
@@ -169,7 +194,10 @@ a:hover {
 }
 
 .innerContent {
-	padding: 0 50px;
+	padding: 20px 50px;
+  margin-bottom: 75px;
+  margin-left: 50px;
+  text-align: center;
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -207,6 +235,13 @@ a:hover {
 	padding-top: 50px;
 }
 
+.rightPadding {
+  padding-right: 50px;
+}
+
+.max400 {
+  max-width: 400px;
+}
 
 .btn-splash {
   text-align: center;
@@ -311,5 +346,11 @@ fieldset[disabled] .btn-primary.focus  {
 @media only screen and (max-width: 760px) {
   .video-container { display: none; }
   .splash-nav-inner { display: none; }
-  .section-container {top: 0 !important;}
+  .section-container {top: -37px !important;}
+
+  .innerContent {
+    padding: 0 50px;
+    margin-left: 0 !important;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 }
