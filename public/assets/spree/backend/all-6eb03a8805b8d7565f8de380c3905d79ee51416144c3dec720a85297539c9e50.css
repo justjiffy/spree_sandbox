@@ -14479,6 +14479,39 @@ video {
   position: absolute;
   top: -100%;
  }
+ .email-capture {
+  display: none;
+  position:absolute;
+  top: -777px;
+  width: 100%;
+  text-align: center;
+  z-index: 1000000000;
+ }
+ .intro-panel{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 60px;
+ }
+ .panel2, .panel3 {
+  opacity: 0;
+ }
+ .intro-saying {
+  color: white;
+  font-size: 40px;
+  max-width: 450px;
+  margin: 0 auto;
+  line-height: 100px;
+ }
+ .button {
+  margin: 25px 25px;
+  height: 25px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px 50px;
+ }
+
 .splash-nav-inner {
   position: fixed;
   height: auto;
@@ -14716,6 +14749,35 @@ a:hover {
   box-shadow:         2px 2px 0px rgba(50, 50, 50, 1);
 }
 /* HACKY-HACK for btn-success and btn overrides */
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-default {
+    background: #000000;
+    color: #ffffff !important;
+    margin-bottom: 25px;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    background: #4f4642;
+}
+
+.btn-default:active, .btn-default.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+
+
 .btn-success, .btn-primary {
   color: #fff;
   background-color: #939393;
@@ -14819,30 +14881,3 @@ fieldset[disabled] .btn-primary.focus  {
 
 
 */
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
-
-
-
- */
-
-.rails-bootstrap-forms-date-select select,
-.rails-bootstrap-forms-time-select select,
-.rails-bootstrap-forms-datetime-select select {
-  display: inline-block;
-  width: auto;
-}
-
-.rails-bootstrap-forms-error-summary {
-  margin-top: 10px;
-}
