@@ -408,7 +408,8 @@ fieldset[disabled] .btn-primary.focus  {
 @media only screen and (max-width: 760px) {
   .video-container { display: none; }
   .splash-nav-inner { display: none; }
-  .section-container {top: -37px !important;}
+  .section-container { top: -37px !important; }
+  .store-container { margin-top: 130px; }
 
   .innerContent {
     padding: 0 50px;
