@@ -7,7 +7,7 @@
     <a href="#for-comics"><h1 class="nav-text">COMICS</h1></a>
     <a href="#for-videos"><h1 class="nav-text">VIDEOS</h1></a>
 </div>
-<div class="section-container">
+<div class="section-container" id="section-container">
   <div class="section for-music" id="for-music">
     <h2 class="splash-subheading">MUSIC</h2>
 
@@ -80,6 +80,16 @@
 </div>
 
 <script type="text/javascript">
+//SET SECTION-CONTAINER TOP
+var windowHeight = $(window).height();
+var sectionHeight = '"' + (windowHeight + 40) + 'px"';
+
+console.log(sectionHeight);
+
+$("#section-container").css('top', $(window).height() + "px");
+
+setHeight(sectionHeight);
+
 // SCROLL ANIMATION
 $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
