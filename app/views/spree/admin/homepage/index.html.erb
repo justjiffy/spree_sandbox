@@ -1,5 +1,6 @@
+<div class="container">
 <h1 class="innerContent">
-	Add New Post - 
+	Add New Post -
 	<span class="noShadow">
 		<%= link_to ("<i class='fa fa-pencil-square-o'></i>").html_safe, main_app.new_path %>
 	</span>
@@ -11,9 +12,10 @@
   <% @posts.each do |f| %>
        <li>
        	<%= link_to ("<i class='fa fa-pencil fa-2x'></i>").html_safe, main_app.edit_post_path(f) %>
-       	<strong><%= truncate(f.title, :length => 20, :separator => ' ') %></strong> | 
-        <%= truncate(f.body, :length => 50, :separator => " ") %> | 
+       	<strong><%= truncate(f.title, :length => 20, :separator => ' ') %></strong> |
+        <%= truncate(f.body, :length => 50, :separator => " ") %> |
         (<%= f.created_at %> by <%= spree_current_user.email %>)</li>
 
         <% end %>
+</div>
 </div>
