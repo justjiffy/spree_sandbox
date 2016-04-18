@@ -26,7 +26,7 @@ video {
   top: -100%;
  }
  .email-capture {
-  display: none;
+/*  display: block;*/
   position:absolute;
   top: -777px;
   width: 100%;

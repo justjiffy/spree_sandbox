@@ -4,18 +4,18 @@ Rails.application.routes.draw do
   # If you would like to change where this engine is mounted, simply change the :at option to something different.
   #
   get '/' => 'welcome#index', as: :root
-  
+
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
   mount Spree::Core::Engine, :at => '/'
-  
+
   get '/post/:id' => 'welcome#show', as: :full
-  
+
   get '/store' => 'spree/home#index', as: :store
-  
+
   get '/calendar/' => 'calendar#index', as: :calendar
-  
+
   get '/contact' => 'contact#index'
-  
+
   get '/experience' => 'experience#index'
   get '/experience/comics' => 'experience#comics'
   get '/experience/game' => 'experience#game'
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   get '/more/press' => 'more#press'
   get '/more/stories' => 'more#stories'
 
-  # CUSTOM ADMIN ROUTES 
+  # CUSTOM ADMIN ROUTES
   get '/admin/homepage' => 'welcome#new', as: :edit_homepage
   get '/admin/homepage/new' => 'welcome#new_post', as: :new
   post '/post' => 'welcome#create', as: :new_post
