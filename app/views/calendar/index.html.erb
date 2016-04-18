@@ -1,15 +1,16 @@
-<h1>UPCOMING EVENTS</h1>
+<div class="calendar-container">
+  <h1>UPCOMING EVENTS</h1>
+    <% @posts.each do |f| %>
 
-<div class="innerContent" style="height: 1000px; width: 75%; background-image: url('https://f1.bcbits.com/img/0005723000_10.jpg'); background-size: 100%"; background-repeat: no-repeat>
-	<h2>LIVE @ The Comic Bug - 1807 Manhattan Beach Blvd, Manhattan Beach - 6:00 Wed, Nov. 11</h2>
+    <div class="innerContent" style="clear: both">
 
-	<p>RUN DOWNHILL! Is it a band? Is it a comic book? Why choose, it's BOTH!<p>
+      <h2><%= f.title %></h2>
+        <%= image_tag f.img.url(:medium), :class => "post" %><br><br>
+        <p><%= f.body %></p>
 
-	<p>RUN DOWNHILL is an audio/visual experience like nothing you've ever seen (or heard)! Check 'em out over here: <a href="https://www.facebook.com/rundownhill">facebook.com/rundownhill</a></p>
+        <br><br><br>
 
-	<p>Come meet author/band member T.J. Troy at The Comic Bug in Manhattan Beach anytime after 6:00 p.m. and make sure you stick around for the musical folk stylings of the RUN DOWNHILL band around 7:45.</p>
+    </div>
+    <% end %>
 
-	<p>SPURS, the latest CD/Comic Book album release from Run Downhill, centers around the town of Kilbourn, and a series of strange and extraordinary events. A small farming town, cut off from the rest of the territory by thick cut mountains, is awaiting the construction of a new rail spur to town, thereby connecting them to the Great Rail, and the rest of the civilized world. Old man William McCallister, head of the McCallister Rail Company, knows the worth of this rail line to the town, and chooses to leverage this power against the townsfolk, squeezing the town and bending them to his workmen’s will. But, a vicious mining accident and it’s aftermath leaves a trail of dead such as the peaceful town can’t bear to burden, especially in light of the recent (and very public) double murder of two of the town’s most beloved citizens at the hands of a McCallister man.</p>
-
-	<p>It'll be a good, old-fashioned hoedown at The Comic Bug! Banjos, fiddles and comics, a match made in campfire heaven!</p>
 </div>

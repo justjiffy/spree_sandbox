@@ -49,7 +49,7 @@ end
 gem 'pry'
 
 gem 'aws-sdk', '< 2.0'
- 
+
 gem 'bootstrap_form'
 gem 'spree', '3.0.4'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'

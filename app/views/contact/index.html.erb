@@ -1,15 +1,19 @@
-<h1>CONTACT</h1>
+<div class="contact-container">
+  <h1>CONTACT</h1>
 
-<div class="innerContent">
-	<br><br>
-	<p>If you're watching this presentation...</p>
-
-	<div style="text-align: center">
-	<h2>Turn and say hello!!!</h2>
-
-	<p>Electronic contact capabilities coming soon!</p>
-	<br><br>
-
-</div>
-
+  <div class="innerContent">
+      <form action="http://formspree.io/tj@rundownhillmusic.com" method="POST">
+      <div class="form-inline">
+        <input type="text" name="name" class="form-control main-contact" placeholder="Your Name">
+        <input type="email" name="_replyto" class="form-control main-contact" placeholder="your_reply@email.com">
+      </div>
+        <br>
+      <div class="form-group">
+        <textarea name="body" class="form-control main-message" rows="10" placeholder="Message: ..."></textarea>
+        <input type="hidden" name="_next" value="#" />
+        <br><br>
+        <button class="btn btn-default" id="contact" type="submit" value="Send">SEND MESSAGE</button>
+      </div>
+    </form>
+  </div>
 </div>
