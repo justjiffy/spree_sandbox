@@ -24,11 +24,18 @@
 <!-- FONT-AWESOME ICONS LINKS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+<!-- mailchimp sign up form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+
 <%= stylesheet_link_tag 'spree/frontend/all', media: 'screen' %>
 <%= csrf_meta_tags %>
 <%= javascript_include_tag 'spree/frontend/custom_app.js' %>
 <!--[if lt IE 9]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
 <![endif]-->
-
 <%= yield :head %>
+<style type="text/css">
+  #mc_embed_signup{background: transparent; clear:right; font:14px Helvetica,Arial,sans-serif; }
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>

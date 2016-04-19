@@ -46,6 +46,10 @@ video {
   transform: scale(1);
   opacity: 1;
  }
+ .email-capture-out {
+  transform: scale(0);
+  opacity: 0;
+ }
  .intro-panel{
   background: black;
   width: 100%;
@@ -58,7 +62,7 @@ video {
  }
  .panel2, .panel3 {
   display: none;
-  opacity: 0;
+  /*opacity: 0;*/
  }
  .intro-saying {
   color: white;

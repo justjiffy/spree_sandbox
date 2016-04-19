@@ -1,27 +1,36 @@
-
-  <div class="email-capture" id="emailCapture" style="display: none">
+  <div class="email-capture" id="emailCapture">
     <%= image_tag("spalsh_capture.png", class: 'img-responsive', style: 'margin: 0 auto') %>
 
     <div class="intro-panel panel1" id="intro-panel">
       <h1 class="intro-saying">
         I suppose you want something for free?
       </h1>
-      <button type="button" class="btn btn-white">YEP!</button>
-      <button type="button" class="btn btn-white">No...</button>
+      <button type="button" class="btn btn-white" id="intro-btn-yes">YEP!</button>
+      <button type="button" class="btn btn-white" id="intro-btn-no">No...</button>
     </div>
     <div class="intro-panel panel2" id="yes-panel">
       <h1 class="intro-saying">
         Give me your email. I'll send you something.
       </h1>
-      <span class="button" id="yes-btn-no">CANCEL</span>
-      <span class="button" id="yes-btn-yes">SEND</span>
+        <div id="mc_embed_signup">
+        <form action="//rundownhillmusic.us11.list-manage.com/subscribe/post?u=ea125bd9be6e6124525fdf1ad&amp;id=02bf5ae933" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" style="margin: 0 auto" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_ea125bd9be6e6124525fdf1ad_02bf5ae933" tabindex="-1" value=""></div>
+            <div style="width: 100%; display: block; text-align: center">
+              <input type="submit" value="Send" name="subscribe" id="mc-embedded-subscribe" class="btn btn-white" style="display: inline-block" onClick="document.getElementById('emailCapture').className = 'email-capture email-capture-out'">
+              <button class="btn btn-white" style="display: inline-block" id="yes-btn-no">CANCEL</button>
+            </div>
+            </div>
+        </form>
+        </div>
+
     </div>
     <div class="intro-panel panel3" id="no-panel">
-      <h1 class="intro-saying">
+      <h1 class="intro-saying" style="margin-top: 25px">
         Good.
       </h1>
-      <span class="button" id="no-btn-no">CANCEL</span>
-      <span class="button" id="no-btn-yes">SEND</span>
     </div>
   </div>
 <div class="video-container">
@@ -109,29 +118,45 @@ $('a[href*=#]:not([href=#])').click(function() {
 <script type="text/javascript">
 //EMAIL CAPTURE
 var captureDiv = document.getElementById('emailCapture');
-var panel1 = document.getElementById('intro-panel');
-  var p1Yes = document.getElementById('intro-btn-yes');
-  var p1No = document.getElementById('intro-btn-no');
-var panel2 = document.getElementById('yes-panel');
-  var p2Yes = document.getElementById('yes-btn-yes');
-  var p2No = document.getElementById('yes-btn-no');
-var panel3 = document.getElementById('no-panel');
-  var p3Yes = document.getElementById('no-btn-yes');
-  var p3No = document.getElementById('no-btn-no');
+
+function setElements(which) {
+  var panel = document.getElementById(which + '-panel');
+  console.log(which + '-btn-yes');
+  var yes = document.getElementById(which + '-btn-yes');
+  var no = document.getElementById(which + '-btn-no');
+  console.log("Elements set: "+ which + ", " + yes + "," + no)
+}
+// }
+// var panel1 = document.getElementById('intro-panel');
+//   var p1Yes = document.getElementById('intro-btn-yes');
+//   var p1No = document.getElementById('intro-btn-no');
+// var panel2 = document.getElementById('yes-panel');
+//   var p2Yes = document.getElementById('yes-btn-yes');
+//   var p2No = document.getElementById('yes-btn-no');
+// var panel3 = document.getElementById('no-panel');
+//   var p3Yes = document.getElementById('no-btn-yes');
+//   var p3No = document.getElementById('no-btn-no');
 
 
 setTimeout( function() {
-  captureDiv.className = "email-capture email-capture-in";},
-  3000 );
+  captureDiv.className = "email-capture email-capture-in";
+  setElements('intro');
+  }, 3000 );
 
-document.getElementById('intro-btn-yes').addEventListener('click', function() {
-  console.log('cool');
-})
+
 
 document.getElementById('intro-btn-no').addEventListener('click', function() {
-  console.log('hide the email panel')
-  captureDiv.style.display="none";
-})
+  document.getElementById('intro-panel').style.display="none";
+  document.getElementById('no-panel').style.display="block";
+  setTimeout( function() {
+    document.getElementById('emailCapture').className = "email-capture email-capture-out";
+  }, 1500 );
+});
+
+document.getElementById('intro-btn-yes').addEventListener('click', function() {
+  document.getElementById('intro-panel').style.display="none";
+  document.getElementById('yes-panel').style.display="block";
+});
 
 
 </script>
