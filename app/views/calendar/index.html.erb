@@ -5,7 +5,9 @@
     <div class="innerContent" style="clear: both">
 
       <h2><%= f.title %></h2>
-        <%= image_tag f.img.url(), :class => "post" %><br><br>
+        <% if f.img.exists? %>
+          <%= image_tag f.img.url(), :class => "post" %><br><br>
+        <% end %>
         <p><%= f.body %></p>
 
         <br><br><br>
