@@ -14526,6 +14526,10 @@ video {
   transform: scale(0);
   opacity: 0;
  }
+ #panel-container {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+ }
  .intro-panel{
   background: black;
   width: 100%;
@@ -14536,10 +14540,13 @@ video {
   bottom: 0;
   border: 3px solid white;
  }
- .panel2, .panel3 {
+ .panel2 {
   display: none;
-  /*opacity: 0;*/
- }
+  bottom: -70px !important;
+}
+ .panel3 {
+  display: none;
+}
  .intro-saying {
   color: white;
   font-size: 40px;
@@ -14614,6 +14621,12 @@ video {
   background-image: url('/assets/bg3.jpg');
   margin-bottom: 100px;
 }
+.post {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 650px;
+}
 .splash-subheading {
   font-size: 52px;
   position: absolute;
@@ -14669,7 +14682,6 @@ video {
   margin: 0 auto;
   padding-bottom: 10px;
 }
-
 .comics-img-l {
   display: inline-block;
 }
@@ -14677,7 +14689,11 @@ video {
   display: inline-block;
   float: right;
 }
-
+.calendar-img{
+  min-width: 500px;
+  text-align: center;
+  display: block;
+}
 /* GENERAL STYLES */
 .spaced {
   margin: 10px;
