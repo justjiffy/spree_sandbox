@@ -14502,7 +14502,11 @@ video {
   top: -100%;
  }
  .email-capture {
-  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform:    scale(0);
+  -ms-transform:     scale(0);
+  -o-transform:      scale(0);
+  transform:         scale(0);
   display: block;
   position:absolute;
   top: 0;
@@ -14516,19 +14520,35 @@ video {
   text-align: center;
   opacity: 0;
   z-index: 1000000000;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -ms-transition: all 2s;
+  -o-transition: all 2s;
   transition: all 2s;
  }
  .email-capture-in {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform:    scale(1);
+  -ms-transform:     scale(1);
+  -o-transform:      scale(1);
+  transform:         scale(1);
   opacity: 1;
  }
  .email-capture-out {
-  transform: scale(0);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   opacity: 0;
  }
  #panel-container {
   opacity: 0;
-  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
  }
  .intro-panel{
   background: black;
@@ -14574,7 +14594,11 @@ video {
   z-index: 10000 !important;
 }
 .splash-nav-inner h1:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform:    scale(1.2);
+  -ms-transform:     scale(1.2);
+  -o-transform:      scale(1.2);
+  transform:         scale(1.2);
 }
 .nav-text {
   position: relative;
@@ -14956,3 +14980,30 @@ fieldset[disabled] .btn-primary.focus  {
 
 
 */
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+
+.rails-bootstrap-forms-date-select select,
+.rails-bootstrap-forms-time-select select,
+.rails-bootstrap-forms-datetime-select select {
+  display: inline-block;
+  width: auto;
+}
+
+.rails-bootstrap-forms-error-summary {
+  margin-top: 10px;
+}
