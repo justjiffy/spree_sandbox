@@ -1,0 +1,60 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title" style="font-size: 34px;" id="storm-title">By the Storm</h2>
+    </div>
+    <div class="panel-body story-inactive" id="storm-story">
+      <p>Who knocks on my door?<br />
+        At this time, in this season,<br />
+        I lie sleeping alone; for some reason,<br />
+        I'm older, my bones ache,<br />
+        the wind hits me harder than before.</p>
+      <p>Without you, I lie here,<br />
+        just sleeping, not dreaming;<br />
+        for 13 years now, you lie<br />
+        hungry and cold,<br />
+        in a grave that I marked with a stone.</p>
+      <p>Who knocks on my door?<br />
+        At this hour of the night,<br />
+        when we all should be wrapped in our bedclothes&hellip;</p>
+      <p>In spite of myself, <br />
+        and the winter outside,<br />
+        I slumbered and dreamt of a fireside&hellip;</p>
+      <p>There, by the hearth,<br />
+        in a blanket of wool,<br />
+        you sat waiting, as I brought myself in from the cold.</p>
+      <p>There'd be tea in the morning,<br />
+        and breakfast be fed,<br />
+        if I just let myself in&hellip;</p>
+      <p>I came from my sleeping<br />
+        back to my awake<br />
+        and found knocking;</p>
+      <p>By mistake,<br />
+        I rose, to the hallway I stood,<br />
+        thinking you had come home<br />
+        and were cold,</p>
+      <p>And I opened the door<br />
+        to the wind and the snow<br />
+        and a branch was found knocking.</p>
+      <p>Just a ghost left behind by the storm.</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function() {
+        var title2 = document.getElementById('storm-title'),
+            content2 = document.getElementById('storm-story');
+
+        title2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        content2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        title2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+        content2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+    })();
+</script>

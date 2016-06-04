@@ -1,0 +1,40 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title" style="font-size: 34px;" id="untitled-title">Untitled</h2>
+    </div>
+    <div class="panel-body story-inactive" id="untitled-story">
+      <p>I don't remember falling asleep. But I remember waking, disoriented, to the
+        blaring siren of the<br />
+        telephone. I'm late again, but I was not sure neither who or what I was, where I am or where I<br />
+        needed to be. I don't have a clock. Yes, these are my sheets, my pillow, the mattress that cuts<br />
+        my lower back into juicy ground chuck. But there was an unfamiliarity about the air. With each <br />
+        breath I am holding back tears. There is the pair of belted pants that will suffice for today. There was work to be<br />
+        done, and I was the only one to do it. I'm solid, like a wall, yet I bend like a sappling in the midst of a Buddhist <br />
+        parable; I give way to the currents of a swollen river. Throughout the storm, I will be tossed like a rag doll, but<br />
+        when a passive earth returns after this tumultuous sky, I will be the only thing left standing; <br />
+        I am tall, by standards of height, by the standards of most men. This one fact is all that bathes me, clothes me, nourishes the living body and manuevers it through the world. <br />
+        I have no choice; I'm merely along for this ride. There's this medicine that I take alot of; when I put shoes on and walk outside, I've forgotten my cigarettes and will return home to get them. <br />
+        I can drive almost any car.
+      </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function() {
+        var title2 = document.getElementById('untitled-title'),
+            content2 = document.getElementById('untitled-story');
+
+        title2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        content2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        title2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+        content2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+    })();
+</script>

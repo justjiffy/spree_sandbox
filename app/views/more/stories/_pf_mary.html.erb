@@ -1,0 +1,46 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title" style="font-size: 34px;" id="mary-title">Mary</h2>
+    </div>
+    <div class="panel-body story-inactive" id="mary-story">
+      <p>It&rsquo;s true that you should take some time off.<br />
+        You shouldn&rsquo;t be in love so soon.</p>
+      <p>I&rsquo;m gonna remove the word &ldquo;should&rdquo; from your vocabulary.</p>
+      <p>It&rsquo;s true you shouldn&rsquo;t have to need me.<br />
+        But why are you so frightened that you do?</p>
+      <p>Forget the others; how could they have known that you belong to me?</p>
+      <p>I&rsquo;m gonna hold on for dear life.</p>
+      <p>Hold onto you.</p>
+      <p>You try so hard not to look at me,<br />
+        but it&rsquo;s all in vain,</p>
+      <p>for even strangers see the love that&rsquo;s in your eyes.</p>
+      <p>Oh, you can&rsquo;t run from me.<br />
+        I got my hooks in you.</p>
+      <p>And, I&rsquo;m gonna hold on for dear life.</p>
+      <p>Hold onto you.</p>
+      <p>It&rsquo;s true you never even asked me:<br />
+        why should I fall so hard for you?</p>
+      <p>And without warning,</p>
+      <p>you run and hide yourself a million miles from me.</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function() {
+        var title2 = document.getElementById('mary-title'),
+            content2 = document.getElementById('mary-story');
+
+        title2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        content2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        title2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+        content2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+    })();
+</script>

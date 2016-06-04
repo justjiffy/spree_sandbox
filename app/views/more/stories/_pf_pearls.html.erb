@@ -1,0 +1,45 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title" style="font-size: 34px;" id="untitled-title">Pearls</h2>
+    </div>
+    <div class="panel-body story-inactive" id="untitled-story">
+      <p>And it&rsquo;s true<br />
+        I&rsquo;ve grown accustomed to<br />
+        All the sweet goodbyes and all the &ldquo;fare thee wells.&rdquo;</p>
+      <p>Now I see<br />
+        What lies in store for me<br />
+        Is nothing, short of going straight to Hell.</p>
+      <p>Turn your pockets out.<br />
+        Their empty contents tumble to the ground.</p>
+      <p>Slipped through my fingertips.<br />
+        I&rsquo;ve been working turning square holes into round.</p>
+      <p>All this time<br />
+        To erase this debt implied<br />
+        Just like arsenic in my wine<br />
+        Might was well resign.</p>
+      <p>All these lies<br />
+        They afford you no disguise<br />
+        Throw my pearls before your swine<br />
+        Might as well resign.</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function() {
+        var title2 = document.getElementById('untitled-title'),
+            content2 = document.getElementById('untitled-story');
+
+        title2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        content2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        title2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+        content2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+    })();
+</script>

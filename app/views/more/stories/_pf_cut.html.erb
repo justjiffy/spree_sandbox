@@ -1,0 +1,45 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title" style="font-size: 34px;" id="cut-title">Cut of A.P.'s Jib</h2>
+    </div>
+    <div class="panel-body story-inactive" id="cut-story">
+         <p>Oh, the witchdoctor put something strange in the food<br />
+           and now the heat in the room is getting too much to take.</p>
+         <p>And this long-legged woman puts her move on the make;<br />
+           by no surprise I could shake</p>
+         <p>She brushed up next to me&hellip;</p>
+         <p>Well, she picked my pocket, then the very next day<br />
+           she mailed back my wallet; everything was still there,</p>
+         <p>Save for the rubber I carry, so everybody knows I'm ready to roll.</p>
+         <p>She played so hard to get;<br />
+           she had every man in that room wrapped around her finger.</p>
+         <p>And while she stole up all their money they just all stood around<br />
+           and while I knew my time was coming, I swore up and down,</p>
+         <p>I'd do everything I could to try to catch her eye.</p>
+         <p>I tried to catch it,<br />
+           Lord, I tried to check it.</p>
+         <p>I tried to change her mind,<br />
+           but all she wants to do is play.</p>
+         <p>She played so hard to get.</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function() {
+        var title2 = document.getElementById('cut-title'),
+            content2 = document.getElementById('cut-story');
+
+        title2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        content2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        title2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+        content2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+    })();
+</script>

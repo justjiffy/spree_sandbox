@@ -1,0 +1,41 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title" style="font-size: 34px;" id="dontcut-title">Don't Cut Your Hair</h2>
+    </div>
+    <div class="panel-body story-inactive" id="dontcut-story">
+      <p>Hey, listen to me:</p>
+      <p>Don&rsquo;t cut your hair so short again.</p>
+      <p>All I&rsquo;m trying to say, it&rsquo;s at a good length for your face.</p>
+      <p>Baby, let your hair grow long!<br />
+        Or, there&rsquo;s nothing I can blow my kisses to&hellip;</p>
+      <p>You keep trying to say <br />
+        you want your bangs out of your face.</p>
+      <p>You had to clean it up,<br />
+        it&rsquo;s all at uneven lengths.</p>
+      <p>Baby, let your hair grow long!<br />
+        Or, there&rsquo;s nothing I can blow my kisses to&hellip;</p>
+      <p>But you got such a style,</p>
+      <p>I don&rsquo;t care about your hair&hellip;</p>
+      <p>C&rsquo;mon, let it grow.</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function() {
+        var title2 = document.getElementById('dontcut-title'),
+            content2 = document.getElementById('dontcut-story');
+
+        title2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        content2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        title2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+        content2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+    })();
+</script>
