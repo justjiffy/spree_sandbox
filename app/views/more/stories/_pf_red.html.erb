@@ -1,0 +1,53 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title" style="font-size: 34px;" id="tooyoung-title">Red Tide</h2>
+    </div>
+    <div class="panel-body story-inactive" id="tooyoung-story">
+      <p>There's a rise in the water<br />
+        as it is pushed to shore<br />
+        by a larger hand. </p>
+      <p>The sound gives it away;<br />
+        the curl of whitewater<br />
+        tumbling down the wall, <br />
+        <br />
+        We were sitting fifty feet away<br />
+        and we didn't want to risk it,<br />
+        and I tried to include you<br />
+        as I wrapped a blanket around us<br />
+        (we were both so cold) <br />
+        and the mist left drops in our hair<br />
+        and you dropped a bomb;</p>
+      <p>and the tide,<br />
+        it continued to reach for me<br />
+        and I did not want to be consumed,<br />
+        but I did not want <br />
+        to be removed<br />
+        from danger of being consumed.</p>
+      <p>Drawn out to sea<br />
+        by a phosphorescent tide<br />
+        without the light<br />
+        nor the buoyancy<br />
+        to float and be found alive<br />
+        on the surface of dark waters. </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function() {
+        var title2 = document.getElementById('tooyoung-title'),
+            content2 = document.getElementById('tooyoung-story');
+
+        title2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        content2.addEventListener('mouseover', function() {
+            content2.classList.add('story-preview');
+        });
+        title2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+        content2.addEventListener('mouseout', function() {
+            content2.classList.remove('story-preview');
+        })
+    })();
+</script>
