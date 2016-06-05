@@ -243,6 +243,30 @@ video {
   text-align: center;
   display: block;
 }
+.story-inactive {
+  width: 100%;
+  height: 0px;
+  padding: 0 15px;
+  overflow: hidden;
+  transition: height 2s ease-in-out;
+}
+.story-preview {
+  height: 500px;
+  overflow: scroll;
+  transition: height 2s ease-in-out;
+}
+.story-container {
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.panel {
+  margin: 0 50px;
+}
+.panel-title {
+  cursor: pointer;
+  width: inherit;
+  display: inline;
+}
 /* GENERAL STYLES */
 .spaced {
   margin: 10px;
@@ -269,14 +293,22 @@ video {
 }
  h2 {
   padding-top: 10px;
- 	font-size: 36px;
+ 	font-size: 40px;
  	text-shadow:
-       1px 1px 0 #fff,
-     -1px -1px 0 #fff,
-      1px -1px 0 #fff,
-      -1px 1px 0 #fff,
-       1px 1px 0 #fff;
+       2px 2px 0 #fff,
+     -2px -2px 0 #fff,
+      2px -2px 0 #fff,
+      -2px 2px 0 #fff,
+       2px 2px 0 #fff;
+ }
 
+ h2 .story {
+    text-shadow:
+       0px 0px 0 #fff,
+     -0px -0px 0 #fff,
+      0px -0px 0 #fff,
+      -0px 0px 0 #fff,
+       0px 0px 0 #fff !important;
  }
 
  p {
@@ -299,7 +331,12 @@ a:hover {
   text-align: center;
 	background-color: rgba(255, 255, 255, 0.5);
 }
-
+.innerContentNorm {
+  padding: 10px 50px;
+  margin-bottom: 75px;
+  margin-left: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
 .paddedContainer {
   margin-top: 127px;
   min-height: 800px;
@@ -488,7 +525,7 @@ fieldset[disabled] .btn-primary.focus  {
 
   .container, .store-container, .calendar-container, .contact-container { margin-top: 130px; }
 
-  .innerContent {
+  .innerContent, .innerContentNorm {
     padding: 0 50px;
     margin-left: 0 !important;
     background-color: rgba(255, 255, 255, 0.5);
